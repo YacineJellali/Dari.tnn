@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B6D0D00-CCC9-4F55-88BD-8FDA92B809F2}</ProjectGuid>
+    <ProjectGuid>{8A5CD186-D03A-4DDA-B30B-AC638FBDE468}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Dari.Domain</RootNamespace>
-    <AssemblyName>Dari.Domain</AssemblyName>
+    <RootNamespace>Dari.service</RootNamespace>
+    <AssemblyName>Dari.service</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -74,11 +74,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Entities\Client.cs" />
-    <Compile Include="Entities\Role.cs" />
+    <Compile Include="ClientService.cs" />
+    <Compile Include="IClientService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Dari.Data\Dari.Data.csproj">
+      <Project>{ec43f60d-f97a-432c-8c44-98948407e94c}</Project>
+      <Name>Dari.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dari.Domain\Dari.Domain.csproj">
+      <Project>{6b6d0d00-ccc9-4f55-88bd-8fda92b809f2}</Project>
+      <Name>Dari.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dari.Service.Pattern\Dari.Service.Pattern.csproj">
+      <Project>{6d75b3c8-7343-4ffa-976b-337d1fa0b987}</Project>
+      <Name>Dari.Service.Pattern</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
